@@ -25,7 +25,6 @@ export class UserResolver {
     try {
       // verify if there is stock
       let productsInfo = [];
-
       for (let index = 0; index < products.length; index++) {
         const product = products[index];
         const { stock, name } = await ProductsService.getStockProduct(
