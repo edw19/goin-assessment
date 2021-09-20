@@ -48,7 +48,6 @@ export class NewProductResolver {
       unlinkSync(`${__dirname}/../../temp/${filename}`);
       return productCreated;
     } catch (error) {
-      console.log(error)
       throw new ValidationError(error);
     }
   }
