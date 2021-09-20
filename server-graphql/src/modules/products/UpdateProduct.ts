@@ -40,7 +40,6 @@ export class UpdateProductResolver {
         );
         imageUri = secure_url;
       }
-      // update image
       const updateProduct = await ProductsService.update(product, imageUri);
       if (image) {
         unlinkSync(`${__dirname}/../../temp/${image.filename}`);
