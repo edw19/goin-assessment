@@ -15,7 +15,7 @@ export class CategoriesResolver {
         }
     }
 
-    // @Authorized([ADMIN])
+    @Authorized([ADMIN])
     @Mutation(() => Categories)
     async createCategory(@Arg("name") name: string) {
         try {
